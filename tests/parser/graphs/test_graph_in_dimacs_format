@@ -1,0 +1,5 @@
+c This is a comment line
+p edge 3 2
+e 1 2
+e 1 3
+z y x
