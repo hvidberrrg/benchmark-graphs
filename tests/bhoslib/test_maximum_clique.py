@@ -8,7 +8,7 @@ class MaximumClique(unittest.TestCase):
 
     def test_kexu_compliance(self):
         graph = bhoslib.maximum_clique_30()
-        graph_kexu = dimacs.get_graph("tests.bhoslib.graphs", "kexu_frb30-15-1.clq")
+        graph_kexu = dimacs.import_graph("tests.bhoslib.graphs", "kexu_frb30-15-1.clq")
         self.assertTrue(nx.is_isomorphic(graph, graph_kexu))
 
     def test_mc30(self):

@@ -2,7 +2,7 @@ import importlib_resources
 import networkx as nx
 
 
-def get_graph(path, filename):
+def import_graph(path, filename):
     """Based on http://lcs.ios.ac.cn/~caisw/Resource/about_DIMACS_graph_format.txt
 
     DIMACS (Center for Discrete Mathematics and Theoretical Computer Science) defined
@@ -64,7 +64,7 @@ def get_graph(path, filename):
             # Line representing an edge
             u = int(tokens[1])
             v = int(tokens[2])
-            # DIMACS nodes are numbered from 1 up to n edges in the graph.
+            # DIMACS nodes are numbered from 1 up to n
             # We'll number them from 0 to n-1
             graph.add_edge(u-1, v-1)
         else:

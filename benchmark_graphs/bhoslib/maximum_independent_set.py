@@ -7,7 +7,7 @@ _mis = "mis"
 def _get_frb_instance(frb, instance):
     # path is on the form: benchmark_graphs.bhoslib.graphs.frb30-15-mis
     # filename is on the form frb30-15-1.mis
-    return dimacs.get_graph(_graphs + "." + frb + _mis, frb + str(instance) + "." + _mis)
+    return dimacs.import_graph(_graphs + "." + frb + _mis, frb + str(instance) + "." + _mis)
 
 
 def maximum_independent_set_30 (instance=1):
